@@ -30,22 +30,22 @@
                         <tbody>
                            
                           
-                            @foreach ($tuser as $no => $laporan)
+                            @foreach ($tuser as $no => $user)
                         <tr>
                             <td Scope="col">{{$no+1}}</td>
-                            <td><a href="http://localhost/phpmyadmin/sql.php?server=1&db=helpdesk&table=reports&pos=0">AFF{{$laporan->id}}</a></td>
-                            <td>{{$laporan->name}}</td>
-                            <td>{{$laporan->email}}</td>
-                            <td>{{$laporan->role}}</td>
+                            <td><a href="http://localhost/phpmyadmin/sql.php?server=1&db=helpdesk&table=reports&pos=0">AFF{{$user->id}}</a></td>
+                            <td>{{$user->name}}</td>
+                            <td>{{$user->email}}</td>
+                            <td>{{$user->role}}</td>
                             <td> 
-                                <form action="/hapus{{$laporan->id}}" method="post">
+                                <form action="/hapus{{$user->id}}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn  btn-block btn-danger btn-sm mb-2 mt-2"><i class="far fa-times-circle"></i></button>
                                 </form> 
                                 
 
-                                <a href="{{route('edit',$laporan->id)}}" class="btn btn-block btn-primary btn-sm mb-2 mt-2 "><i class="fas fa-edit"></i></a></td>
+                                <a href="{{route('edit',$user->id)}}" class="btn btn-block btn-primary btn-sm mb-2 mt-2 "><i class="fas fa-edit"></i></a></td>
                             
                         </tr>
                         @endforeach 
