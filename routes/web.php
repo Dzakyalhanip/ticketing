@@ -42,7 +42,7 @@ Route::post('/client',[ClientController::class,'simpan'])->name('simpan');
 Route::get('/agent',[AgentController::class,'index'])->name('home');
 // Route::get('/agent',[TuserController::class,'show']);
 Route::get('/form',[AgentController::class,'create'])->name('viewagent');
-Route::delete('/hapus{id}',[AgentController::class,'delete']);
+Route::delete('/hapusticket{id}',[AgentController::class,'delete']);
 Route::get('oneToMany2/{nama}', 'OneToManyController@olahTabelUserPost');
 // Route::post('/agent',[AgentController::class,'simpanagent'])->name('simpan');
 // Route::get('/agent/form/{id}',[AgentController::class,'edit'])->name('edit');
@@ -53,7 +53,7 @@ Route::get('/admin',[AdminController::class,'index'])->name('home');
 Route::get('/formakun',[AdminController::class,'showform'])->name('view');
 Route::get('edit/{id}',[AdminController::class,'edit'])->name('edit');
 Route::put('/update/{id}',[AdminController::class,'update'])->name('update');
-Route::delete('/hapus{id}',[AdminController::class,'delete']);
+Route::delete('/hapususer{id}',[AdminController::class,'delete']);
 
 
 

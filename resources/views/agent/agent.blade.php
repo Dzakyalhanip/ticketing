@@ -40,7 +40,7 @@
                                            
                                             <td>
                                                     {{-- <a href="{{route('edit',$laporans->id)}}" class="btn btn-block btn-primary btn-sm mb-2 mt-2 "><i class="fas fa-thumbs-up"></i></a> --}}
-                                                    <form action="/hapus{{$laporans->id}}" method="post">
+                                                    <form action="/hapusticket{{$laporans->id}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger"><i class="far fa-times-circle"></i></button>
