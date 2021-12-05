@@ -77,6 +77,12 @@
     <!-- /#left-panel -->
     <!-- Right Panel -->
     <div id="right-panel" class="right-panel">
+        @if (session('status'))
+        <div class="alert alert-danger">{{session('status')}}</div>
+        @endif
+        @if (session('statusedit'))
+        <div class="alert alert-success">{{session('statusedit')}}</div>
+        @endif
         <!-- Header-->
         @include('agent.header')
         <!-- /#header -->
@@ -131,8 +137,8 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">349</span></div>
-                                            <div class="stat-heading">Templates</div>
+                                            <div class="stat-text"><span class="count">{{$laporans->count('id')}}</span></div>
+                                            <div class="stat-heading">Ticket</div>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +155,7 @@
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
-                                            <div class="stat-text"><span class="count">2986</span></div>
+                                            <div class="stat-text"><span class="count">{{$laporans->user->count('id')}}</span></div>
                                             <div class="stat-heading">Clients</div>
                                         </div>
                                     </div>

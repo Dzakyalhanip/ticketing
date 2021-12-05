@@ -48,6 +48,6 @@ class ClientController extends Controller
 
         
         ]);
-        return redirect('/client')->with('status','Data Berhasil Di Tambah');
+        return redirect('/client')->with('status','Data Berhasil Terkirim');
     }
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Agent;
 use App\Models\Agentstatus;
+use App\Models\Tuser;
+
 
 
 class AgentController extends Controller
@@ -57,5 +59,6 @@ class AgentController extends Controller
         return redirect('/agent')->with('statusedit','data berhasil di ubah');
         
     }
+    
     
 }

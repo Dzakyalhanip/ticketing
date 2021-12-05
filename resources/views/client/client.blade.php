@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                     <div class="col-12 col-xl-4">
                         {{-- <div class="card">
@@ -155,7 +155,7 @@
                     <div class="col-12 ">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Reports</h4>
+                                <h4>Form Report</h4>
                             </div>
                             
                             <div class="card-body">
@@ -189,10 +189,14 @@
                                             <option value="Normal">Normal</option>
                                           </select>
                                       </div>
-                                      <div class="mb-3">
+                                      {{-- <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                                         <textarea class="form-control" id="description"  name="description" rows="3" value="{{old('description')}}"></textarea>
-                                      </div>
+                                      </div> --}}
+                                      <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea name="description" rows="5" cols="40" class="form-control tinymce-editor" id="description"  name="description" rows="3" value="{{old('description')}}"></textarea>
+                                    </div>  
                                       {{-- <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Status</label>
                                             <select class="form-select"  id="status" value="{{old('status')}}"  name="status" aria-label="Default select example"  >

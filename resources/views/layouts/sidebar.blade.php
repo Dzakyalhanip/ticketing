@@ -39,7 +39,7 @@
                 <li class="menu-title">Icons</li><!-- /.menu-title -->
 
                 <li >
-                    <a href="#" > <i class="menu-icon fa fa-tasks"></i>Icons</a>
+                    <a href="" > <i class="menu-icon fa fa-tasks"></i>form</a>
                     
                 </li>
                 <li>
