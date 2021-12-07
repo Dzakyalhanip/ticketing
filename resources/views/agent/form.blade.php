@@ -48,8 +48,8 @@
                                                 <select class="form-select" id="status" value="{{old('status')}}"  name="status" aria-label="Default select example"  >
                                                     <option selected>{{$laporans->status}}</option>
                                                     <option value="Sedang Dalam Proses">Sedang Dalam Proses</option>
-                                                    <option value="Sedang Dalam Proses">Sudah Selesai Perbaiki</option>
-                                                    <option value="Sedang Dalam Proses">Closed</option>
+                                                    <option value="Sudah Selesai Di Perbaik">Sudah Selesai Di Perbaiki</option>
+                                                    <option value="Closed">Closed</option>
                                                   </select>
                                               </div>
                                             </td>

@@ -21,6 +21,7 @@
                                             <th>Priority</th>
                                             <th>Description</th>
                                             <th>Status</th>
+                                            <th>Last Updated</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -34,10 +35,12 @@
                                             <td>{{$laporans->priority}}</td>  
                                             <td>{{$laporans->description}}</td>  
                                             <td>{{$laporans->status}}</td>  
+                                            <td>{{$laporans->updated_at}}</td>  
+
                                            
                                             <td>
                                                     {{-- <a href="{{route('edit',$laporans->id)}}" class="btn btn-block btn-primary btn-sm mb-2 mt-2 "><i class="fas fa-thumbs-up"></i></a> --}}
-                                                    <form action="/hapus{{$laporans->id}}" method="post">
+                                                    <form action="/hapusticket{{$laporans->id}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger"><i class="far fa-times-circle"></i></button>
@@ -54,7 +57,7 @@
                     </div> <!-- /.card -->
                 </div>  <!-- /.col-lg-8 -->
 
-                <div class="col-xl-4">
+                <div class="col-xl-5">
                     <div class="row">
                         <div class="col-lg-6 col-xl-12">
                             <div class="card br-0">

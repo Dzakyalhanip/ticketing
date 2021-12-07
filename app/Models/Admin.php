@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Agentstatus extends Model
+class Admin extends Model
 {
+    
     use HasFactory;
-    protected $table='status';
+    protected $table='users';
     protected $fillable =[
-        'status'
+        'id','name','email'
         
     ];
-    
 }

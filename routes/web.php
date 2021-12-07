@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\AdminController;
+
+
 
 
 /*
@@ -37,12 +40,25 @@ Route::post('/client',[ClientController::class,'simpan'])->name('simpan');
 
 // Agent
 Route::get('/agent',[AgentController::class,'index'])->name('home');
-Route::get('/form',[AgentController::class,'create'])->name('view');
-Route::delete('/hapus{id}',[AgentController::class,'delete']);
+// Route::get('/agent',[TuserController::class,'show']);
+Route::get('/form',[AgentController::class,'create'])->name('viewagent');
+Route::delete('/hapusticket{id}',[AgentController::class,'delete']);
 Route::get('oneToMany2/{nama}', 'OneToManyController@olahTabelUserPost');
 // Route::post('/agent',[AgentController::class,'simpanagent'])->name('simpan');
 // Route::get('/agent/form/{id}',[AgentController::class,'edit'])->name('edit');
 Route::put('/update/{id}',[AgentController::class,'update'])->name('update');
+
+// Admin
+Route::get('/admin',[AdminController::class,'index'])->name('home');
+Route::get('/formakun',[AdminController::class,'showform'])->name('view');
+Route::get('edit/{id}',[AdminController::class,'edit'])->name('edit');
+Route::put('/update/{id}',[AdminController::class,'update'])->name('update');
+Route::delete('/hapususer{id}',[AdminController::class,'delete']);
+
+
+
+
+
 
 
 
